@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:latihan_3/page1.dart';
+import 'package:latihan_3/page2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +34,8 @@ class MyApp extends StatelessWidget {
             ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 124, 160, 122)),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: {'/': (context) => page1(), '/page2': (context) => page2()},
+      initialRoute: '/',
     );
   }
 }
